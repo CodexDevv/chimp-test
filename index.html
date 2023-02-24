@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Titlu</title>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      background: #181414;
+      min-height: 100%;
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    h1 {
+      color: white;
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .box {
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .invisible {
+      opacity: 0;
+    }
+
+    #tabla {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      text-align: center;
+      /* border: 1px solid #808080;
+      border-radius: 12px;
+      padding: 20px; */
+    }
+    #tabla > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background: #444444;
+      aspect-ratio: 1;
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      font-size: 28px;
+      font-weight: 800;
+      border: 1px solid #808080;
+      transition: 150ms all;
+    }
+
+    #tabla > div:hover {
+      background: #636363;
+      scale: 1.1;
+    }
+    #tabla > div.correct {
+      background: rgb(0, 239, 0);
+    }
+    #tabla > div.incorrect {
+      background: red;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Chimp Test</h1>
+      <div id="tabla"></div>
+    </div>
+  </body>
+</html>
