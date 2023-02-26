@@ -5,6 +5,18 @@ let NodeNumsCopy = []
 let startSize = 4
 let stopGame = false
 
+let modal = document.getElementById("myModal");
+let span = document.getElementsByClassName("close")[0];
+let restartBtn = document.getElementsByClassName("restart")[0];
+
+span.onclick = function () {
+  modal.style.display = "none"
+}
+
+restartBtn.onclick = function () {
+  window.location.reload()
+}
+
 function generateArray() {
   let nums = []
   ranNums = [],
@@ -98,7 +110,10 @@ function roundLoop() {
     }
   }
   if (stopGame) {
-    alert("stopgame")
+    //TODO: Show Restart Game Dialog
+    // Also create a style.css
+    // alert("Game over!")
+    modal.style.display = "block";
   }
 }
 
